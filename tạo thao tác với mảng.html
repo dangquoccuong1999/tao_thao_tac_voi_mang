@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Sample Screen:</h1>
+<input style="width: 300px" id="input">
+<button onclick="add()">ADD</button>
+<button onclick="display()">Display</button>
+<div id="display"></div>
+
+<script>
+    let arr=[];
+    function add() {
+        let input = document.getElementById('input').value;
+        arr.push(input);
+        console.log(arr);
+    }
+    function display() {
+        let e="";
+        for(let i=0; i<arr.length; i++){
+            e += "Element "+ i + " = " + arr[i] + "<br>";
+        }
+        document.getElementById("display").innerHTML=e;
+    }
+</script>
+</body>
+</html>
